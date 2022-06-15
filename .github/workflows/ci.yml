@@ -23,9 +23,9 @@ jobs:
         run: cd $GITHUB_WORKSPACE
 
       - name: Restore Packages
-        run: nuget restore ElephantApp.sln
+        run: nuget restore ElephantApp/ElephantApp.sln
 
       - name: Build Solution
         run: |
-          msbuild.exe ElephantApp.sln /p:platform="Any CPU" /p:configuration="Release"
+          msbuild.exe ElephantApp/ElephantApp.sln /p:platform="Any CPU" /p:configuration="Release"
 
