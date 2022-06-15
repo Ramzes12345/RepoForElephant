@@ -29,7 +29,5 @@ jobs:
         run: |
           msbuild.exe ElephantApp/ElephantApp.sln /p:platform="Any CPU" /p:configuration="Release"
 
-- uses: actions/upload-artifact@v3
-  with:
-    name: ElephantApp/ElephantApp/bin/Release/
-    path: ElephantApp/ElephantApp/bin/Release/ # or path/to/artifact
+      - name: Publish
+        run: dotnet publish ElephantApp/ElephantApp/ElephantApp.csproj -c Release -o release — nologo
