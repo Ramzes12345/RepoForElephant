@@ -28,9 +28,3 @@ jobs:
       - name: Build Solution
         run: |
           msbuild.exe ElephantApp/ElephantApp.sln /p:platform="Any CPU" /p:configuration="Release"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.2
-      with:
-        name: Files
-        path: D:/a/RepoForElephant/ElephantApp/ElephantApp/bin/Release/
